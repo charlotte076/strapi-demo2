@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "title2s",
+  "info": {
+    "singularName": "title2",
+    "pluralName": "title2s",
+    "displayName": "title2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "noah": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}
