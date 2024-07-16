@@ -4,7 +4,7 @@
   "info": {
     "singularName": "title2",
     "pluralName": "title2s",
-    "displayName": "title2",
+    "displayName": "article",
     "description": ""
   },
   "options": {
@@ -18,6 +18,13 @@
         "preset": "toolbarBalloon"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string"
     }
   }
 }

@@ -362,52 +362,12 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiTitleTitle extends Schema.CollectionType {
-  collectionName: 'titles';
-  info: {
-    singularName: 'title';
-    pluralName: 'titles';
-    displayName: 'title';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titleName: Attribute.String;
-    author: Attribute.String;
-    desc: Attribute.String;
-    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    users_permissions_user: Attribute.Relation<
-      'api::title.title',
-      'manyToOne',
-      'plugin::users-permissions.user'
-    >;
-    test233: Attribute.Blocks;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::title.title',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::title.title',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiTitle2Title2 extends Schema.CollectionType {
   collectionName: 'title2s';
   info: {
     singularName: 'title2';
     pluralName: 'title2s';
-    displayName: 'title2';
+    displayName: 'article';
     description: '';
   };
   options: {
@@ -421,6 +381,8 @@ export interface ApiTitle2Title2 extends Schema.CollectionType {
           preset: 'toolbarBalloon';
         }
       >;
+    title: Attribute.String & Attribute.Required;
+    author: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -848,11 +810,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    titles: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'oneToMany',
-      'api::title.title'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -880,7 +837,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::title.title': ApiTitleTitle;
       'api::title2.title2': ApiTitle2Title2;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
