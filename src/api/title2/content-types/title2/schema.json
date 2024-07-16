@@ -12,13 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "noah": {
+    "content233": {
       "type": "customField",
       "options": {
-        "output": "HTML",
-        "preset": "rich"
+        "preset": "toolbarBalloon"
       },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

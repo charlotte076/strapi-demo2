@@ -414,12 +414,11 @@ export interface ApiTitle2Title2 extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    noah: Attribute.RichText &
+    content233: Attribute.RichText &
       Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::ckeditor5.CKEditor',
         {
-          output: 'HTML';
-          preset: 'rich';
+          preset: 'toolbarBalloon';
         }
       >;
     createdAt: Attribute.DateTime;
