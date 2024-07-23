@@ -6,7 +6,7 @@ module.exports = {
         {
           uid: "api::title2.title2", // 替换成你的内容类型 UID
           draft: {
-            url: "https://h5-t3.noahgrouptest.com/subapps/noah-chat-h5/index.html#/strapi",
+            url: "https://noah-live.noahgrouptest.com/#/strapi-demo",
             query: {
               type: "post",
               slug: "{id}",
