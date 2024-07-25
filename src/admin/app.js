@@ -1,8 +1,12 @@
-import favicon from "./extensions/WechatIMG5066.jpg";
 const config = {
   locales: ["zh-Hans"],
-  head: {
-    favicon: favicon,
+  translations: {
+    "zh-Hans": {
+      "Auth.form.welcome.title": "诺亚CMS内容平台",
+      "Auth.form.welcome.subtitle": "登录到您的账户",
+      "app.components.LeftMenu.navbrand.title": "亚CMS内容平台",
+      "app.components.LeftMenu.navbrand.workplace": "我的工作区",
+    },
   },
 };
 

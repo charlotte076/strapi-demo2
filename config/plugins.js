@@ -16,4 +16,8 @@ module.exports = {
       ],
     },
   },
+  "custom-auth": {
+    enabled: true,
+    resolve: "./src/plugins/custom-auth",
+  },
 };
